@@ -3,6 +3,7 @@ package org.feather.ecommerce;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 /**
  * @projectName: e-commerce-springcloud
@@ -13,6 +14,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @since: 2023-07-13 22:25
  * @version: 1.0
  */
+@EnableJpaAuditing
 @EnableDiscoveryClient
 @SpringBootApplication
 public class AuthorityCenterApplication {

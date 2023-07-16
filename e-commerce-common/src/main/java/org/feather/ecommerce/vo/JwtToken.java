@@ -1,5 +1,9 @@
 package org.feather.ecommerce.vo;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * @projectName: e-commerce-springcloud
  * @package: org.feather.ecommerce.vo
@@ -9,7 +13,9 @@ package org.feather.ecommerce.vo;
  * @since: 2023-07-14 8:44
  * @version: 1.0
  */
-
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class JwtToken {
 
     /**
