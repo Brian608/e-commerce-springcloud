@@ -1,3 +1,9 @@
 ### 查询服务实例信息
 GET http://127.0.0.1:8000/ecommerce-nacos-client/nacos-client/service-instance
 Accept: application/json
+
+### 查看 Sleuth 跟踪信息
+GET http://127.0.0.1:9001/feather/ecommerce-nacos-client/sleuth/trace-info
+Accept: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidG9rZW5cIjpcImZlYXRoZXJcIn0iLCJqdGkiOiIyZmY1ZWJkNS1jMGNmLTQ4N2MtYjc4YS0wMDdhODM3N2NkYzUiLCJleHAiOjE2OTE1OTY4MDB9.PVOV9xPml3_oYpw5XLiB-ONuLLBYpjGFAH9aw5z9cza2_qgyN59CejDBoBLCLfcN32v5-Pqh6m7YLY4TXtwO4xIotx7DUoiBP1XQHvm20_7GLXMSBqyqJDabONoRNasgPFmuHo79gPD-Ho4TwGbm711LAEshaSLU91bavIp08n5rwx4krvUaCYnrYiSZWPYvXxOg_uVdjyTq8oufpvAVqlBbP6cm4xfJnjoorrTTYI-tJgkCsJQoWQ3mLtvaQeesG3-HT2cWhqDPrylYinfPCenZilQJdmAX4Yd4AG_edNr8uKNscV9SjoVw-Slicpn_Vjd4jaKZGJNr7YoQto-49Q
+token: feather
