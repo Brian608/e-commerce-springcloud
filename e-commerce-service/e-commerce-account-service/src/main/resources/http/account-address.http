@@ -1,0 +1,43 @@
+### 创建用户地址信息
+POST http://127.0.0.1:9001/feather/ecommerce-account-service/address/create-address
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidG9rZW5cIjpcImZlYXRoZXJcIn0iLCJqdGkiOiJmMWQ1YzBlOS0xMzgxLTQ2MDMtOTRkMC1iYjNhMjY4MWIwOWEiLCJleHAiOjE2OTIxMTUyMDB9.h85UjcOBO54SjHrDvsalj6ivftBbYVBeaHo46j5vueYe-563GY8EksQRE5aTQUNUYMvi7A0CudFmAy_e6Wx1l7vcOiQD7W2BTsqj9Psmidse5OwkqfvesHHMhDEmfQN8EIRDABWKuE64aC-grSR-sXHI7YsVLfOaxpLeAIfbkD7pl6TFcHOcNk5Uoxg5RpD8tPQ9YWcr-S5zBLc7gmrvQgHjUuVTylyxxVp7Xy3Tag3DczMhWpFTutUOjoUvq4XixShfJxCimrXQxDOui-zZ8jxXDuL1ouPCjHUDi8AOqOlbvVXsSVwno_jf2S8fw7q220QhqQrGTZJgcNvtsjwUeg
+
+{
+  "userId": 16,
+  "addressItems": [
+    {
+      "username": "feather",
+      "phone": "16600000001",
+      "province": "上海市",
+      "city": "上海市",
+      "addressDetail": "闵行区"
+    }
+  ]
+}
+
+### 当前登录用户地址信息
+GET http://127.0.0.1:9001/feather/ecommerce-account-service/address/current-address
+Accept: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidG9rZW5cIjpcImZlYXRoZXJcIn0iLCJqdGkiOiJmMWQ1YzBlOS0xMzgxLTQ2MDMtOTRkMC1iYjNhMjY4MWIwOWEiLCJleHAiOjE2OTIxMTUyMDB9.h85UjcOBO54SjHrDvsalj6ivftBbYVBeaHo46j5vueYe-563GY8EksQRE5aTQUNUYMvi7A0CudFmAy_e6Wx1l7vcOiQD7W2BTsqj9Psmidse5OwkqfvesHHMhDEmfQN8EIRDABWKuE64aC-grSR-sXHI7YsVLfOaxpLeAIfbkD7pl6TFcHOcNk5Uoxg5RpD8tPQ9YWcr-S5zBLc7gmrvQgHjUuVTylyxxVp7Xy3Tag3DczMhWpFTutUOjoUvq4XixShfJxCimrXQxDOui-zZ8jxXDuL1ouPCjHUDi8AOqOlbvVXsSVwno_jf2S8fw7q220QhqQrGTZJgcNvtsjwUeg
+
+### 通过 id 获取用户地址信息
+GET http://127.0.0.1:9001/feather/ecommerce-account-service/address/address-info?id=11
+Accept: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidG9rZW5cIjpcImZlYXRoZXJcIn0iLCJqdGkiOiJmMWQ1YzBlOS0xMzgxLTQ2MDMtOTRkMC1iYjNhMjY4MWIwOWEiLCJleHAiOjE2OTIxMTUyMDB9.h85UjcOBO54SjHrDvsalj6ivftBbYVBeaHo46j5vueYe-563GY8EksQRE5aTQUNUYMvi7A0CudFmAy_e6Wx1l7vcOiQD7W2BTsqj9Psmidse5OwkqfvesHHMhDEmfQN8EIRDABWKuE64aC-grSR-sXHI7YsVLfOaxpLeAIfbkD7pl6TFcHOcNk5Uoxg5RpD8tPQ9YWcr-S5zBLc7gmrvQgHjUuVTylyxxVp7Xy3Tag3DczMhWpFTutUOjoUvq4XixShfJxCimrXQxDOui-zZ8jxXDuL1ouPCjHUDi8AOqOlbvVXsSVwno_jf2S8fw7q220QhqQrGTZJgcNvtsjwUeg
+
+### 获取用户地址信息
+POST http://127.0.0.1:9001/feather/ecommerce-account-service/address/address-info-by-table-id
+Content-Type: application/json
+e-commerce-user: eyJhbGciOiJSUzI1NiJ9.eyJlLWNvbW1lcmNlLXVzZXIiOiJ7XCJpZFwiOjEwLFwidG9rZW5cIjpcImZlYXRoZXJcIn0iLCJqdGkiOiJmMWQ1YzBlOS0xMzgxLTQ2MDMtOTRkMC1iYjNhMjY4MWIwOWEiLCJleHAiOjE2OTIxMTUyMDB9.h85UjcOBO54SjHrDvsalj6ivftBbYVBeaHo46j5vueYe-563GY8EksQRE5aTQUNUYMvi7A0CudFmAy_e6Wx1l7vcOiQD7W2BTsqj9Psmidse5OwkqfvesHHMhDEmfQN8EIRDABWKuE64aC-grSR-sXHI7YsVLfOaxpLeAIfbkD7pl6TFcHOcNk5Uoxg5RpD8tPQ9YWcr-S5zBLc7gmrvQgHjUuVTylyxxVp7Xy3Tag3DczMhWpFTutUOjoUvq4XixShfJxCimrXQxDOui-zZ8jxXDuL1ouPCjHUDi8AOqOlbvVXsSVwno_jf2S8fw7q220QhqQrGTZJgcNvtsjwUeg
+
+{
+  "ids": [
+    {
+      "id": 11
+    },
+    {
+      "id": 10
+    }
+  ]
+}
