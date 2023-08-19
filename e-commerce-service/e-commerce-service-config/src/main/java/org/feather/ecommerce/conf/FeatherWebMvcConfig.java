@@ -1,5 +1,4 @@
 package org.feather.ecommerce.conf;
-
 import org.feather.ecommerce.filter.LoginUserInfoInterceptor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -28,19 +27,20 @@ public class FeatherWebMvcConfig  extends WebMvcConfigurationSupport {
     }
 
     /**
-     * 让 mvc 加载swagger的静态资源
-     * @param registry
-     */
+     * <h2>让 MVC 加载 Swagger 的静态资源</h2>
+     * */
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/**")
-                .addResourceLocations("classpath:/static/");
+
+        registry.addResourceHandler("/**").
+                addResourceLocations("classpath:/static/");
         registry.addResourceHandler("swagger-ui.html")
-                .addResourceLocations("classpath://META-INF/resources/");
+                .addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("doc.html")
-                .addResourceLocations("classpath://META-INF/resources/");
+                .addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**")
                 .addResourceLocations("classpath:/META-INF/resources/webjars/");
+
         super.addResourceHandlers(registry);
     }
 }

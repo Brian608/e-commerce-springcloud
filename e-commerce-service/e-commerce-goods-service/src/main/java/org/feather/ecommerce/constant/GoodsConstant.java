@@ -12,6 +12,6 @@ package org.feather.ecommerce.constant;
 public interface GoodsConstant {
 
     /** redis key */
-    public static final String ECOMMERCE_GOODS_DICT_KEY =
+     String ECOMMERCE_GOODS_DICT_KEY =
             "ecommerce:goods:dict:20230101";
 }
