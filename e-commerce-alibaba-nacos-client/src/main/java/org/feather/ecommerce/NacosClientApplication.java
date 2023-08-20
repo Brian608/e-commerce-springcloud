@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @projectName: e-commerce-springcloud
@@ -14,6 +16,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * @since: 2023-07-09 22:28
  * @version: 1.0
  */
+@EnableFeignClients
+@RefreshScope
 @Slf4j
 @EnableDiscoveryClient
 @SpringBootApplication
