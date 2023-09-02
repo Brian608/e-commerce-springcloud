@@ -3,6 +3,8 @@ package org.feather.ecommerce;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -16,6 +18,8 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @since: 2023-07-09 22:28
  * @version: 1.0
  */
+@ServletComponentScan
+@EnableCircuitBreaker  //启动hystrix
 @EnableFeignClients
 @RefreshScope
 @Slf4j

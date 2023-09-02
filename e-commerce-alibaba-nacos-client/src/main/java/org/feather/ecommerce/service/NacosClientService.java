@@ -5,15 +5,12 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCollapser;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.kafka.common.protocol.types.Field;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Service;
-
+import java.util.concurrent.Future;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Future;
 
 /**
  * @projectName: e-commerce-springcloud
@@ -46,7 +43,7 @@ public class NacosClientService {
 //        }
 
         // 测试 NacosClientHystrixCommand 熔断
-//        throw new RuntimeException("has some error");
+       // throw new RuntimeException("has some error");
 
         log.info("request nacos client to get service instance info: [{}]", serviceId);
         return discoveryClient.getInstances(serviceId);
@@ -65,6 +62,28 @@ public class NacosClientService {
         return result;
     }
 
+    /**
+     * 使用注解实现 Hystrix 请求合并
+     * @param servicedId
+     * @return
+     */
+    @HystrixCollapser(
+            batchMethod = "findNacosClientInfos",
+            scope = com.netflix.hystrix.HystrixCollapser.Scope.GLOBAL,
+            collapserProperties = {
+                    @HystrixProperty(name = "timerDelayInMilliseconds", value = "300")
+            }
+    )
+    public Future<List<ServiceInstance>> findNacosClientInfo(String servicedId){
+        // 系统运行正常, 不会走这个方法
+        throw new RuntimeException("This method body should not be executed!");
+    }
+    @HystrixCommand
+    public List<List<ServiceInstance>> findNacosClientInfos(List<String> serviceIds) {
+
+        log.info("coming in find nacos client infos: [{}]", JSON.toJSONString(serviceIds));
+        return getNacosClientInfos(serviceIds);
+    }
 
 
 }
