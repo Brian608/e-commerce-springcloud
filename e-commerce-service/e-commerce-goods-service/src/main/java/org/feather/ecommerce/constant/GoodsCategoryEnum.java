@@ -3,6 +3,7 @@ package org.feather.ecommerce.constant;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+import java.util.Arrays;
 import java.util.Objects;
 import java.util.stream.Stream;
 
@@ -46,4 +47,10 @@ public enum GoodsCategoryEnum {
                         () -> new IllegalArgumentException(code + " not exists")
                 );
     }
+    public  static  boolean checkStatus(Integer valueFromFrontend){
+        return  Arrays.stream(GoodsCategoryEnum.values())
+                .anyMatch(uploadType -> uploadType.getCode().equals(valueFromFrontend));
+
+    }
+
 }
