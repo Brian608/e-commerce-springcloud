@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @package: org.feather.ecommerce.service.impl
  * @className: BalanceServiceImpl
  * @author: feather
- * @description:用于余额相关服务接口实现
+ * @description: 用于余额相关服务接口实现
  * @since: 2023-08-15 7:22
  * @version: 1.0
  */
