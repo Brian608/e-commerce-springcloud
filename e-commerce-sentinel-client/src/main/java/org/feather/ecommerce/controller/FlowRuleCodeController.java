@@ -7,7 +7,7 @@ import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
-import org.feather.ecommerce.bolckHandler.FeatherBlockHandler;
+import org.feather.ecommerce.bolck_handler.FeatherBlockHandler;
 import org.feather.ecommerce.vo.CommonResponse;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

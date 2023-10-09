@@ -1,4 +1,4 @@
-package org.feather.ecommerce.bolckHandler;
+package org.feather.ecommerce.bolck_handler;
 
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alibaba.fastjson.JSON;

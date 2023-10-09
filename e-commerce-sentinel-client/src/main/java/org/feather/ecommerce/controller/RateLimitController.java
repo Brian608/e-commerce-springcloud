@@ -1,9 +1,8 @@
 package org.feather.ecommerce.controller;
 
-import com.alibaba.cloud.sentinel.annotation.SentinelRestTemplate;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import lombok.extern.slf4j.Slf4j;
-import org.feather.ecommerce.bolckHandler.FeatherBlockHandler;
+import org.feather.ecommerce.bolck_handler.FeatherBlockHandler;
 import org.feather.ecommerce.vo.CommonResponse;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
