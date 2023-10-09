@@ -1,10 +1,8 @@
 package org.feather.ecommerce.controller;
 
-import com.alibaba.cloud.sentinel.annotation.SentinelRestTemplate;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
-import org.feather.ecommerce.bolck_handler.FeatherBlockHandler;
 import org.feather.ecommerce.fallback_handler.FeatherFallBackHandler;
 import org.feather.ecommerce.vo.JwtToken;
 import org.feather.ecommerce.vo.UserNameAndPassword;
