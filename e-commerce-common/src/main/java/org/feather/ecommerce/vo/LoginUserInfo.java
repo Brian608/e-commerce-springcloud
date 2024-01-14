@@ -28,7 +28,7 @@ public class LoginUserInfo {
     /**
      * 用户名
      */
-    private String token;
+    private String username;
 
 
 }
