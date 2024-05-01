@@ -18,7 +18,7 @@ import java.util.List;
  * @package: org.feather.ecommerce.config
  * @className: DynamicRouteServiceImpl
  * @author: feather
- * @description: 时间推送  aware ：动态更新 路由网关 Service
+ * @description: 事件推送  aware ：动态更新 路由网关 Service
  * @since: 2023-07-16 16:51
  * @version: 1.0
  */
